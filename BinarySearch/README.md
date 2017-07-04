@@ -14,7 +14,7 @@ If so, then the value exists.
 
 If it is, then we need to look in the left half of the array.
 
-** Is the number we're looking for larger than the middle value?**
+**Is the number we're looking for larger than the middle value?**
 
 If it is, then we need to look for it in the right half of the array.
 
