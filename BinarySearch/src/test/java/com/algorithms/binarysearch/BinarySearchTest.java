@@ -56,7 +56,6 @@ public class BinarySearchTest {
 	public void testInvalidInput() {
 		BinarySearch binarySearch = new BinarySearch();
 		int[] inputArray = initRandArray();
-		
 		assertFalse("Expected value to not be searched", binarySearch.search(inputArray, 50, true));
 	}
 	
