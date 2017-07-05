@@ -29,11 +29,6 @@ public class BinarySearchTest {
 		assertFalse("Expected value to not be found", binarySearch.search(inputArray, 100, true));
 		assertTrue("Expected value to be found", binarySearch.search(inputArray, 99, true));
 		assertFalse("Expected value to not be found", binarySearch.search(inputArray, -20, true));
-		
-		System.out.println("Value Found: " + binarySearch.search(inputArray, 10, true));
-		System.out.println("Value Found: " + binarySearch.search(inputArray, 100, true));
-		System.out.println("Value Found: " + binarySearch.search(inputArray, 55, false));
-		System.out.println("Value Found: " + binarySearch.search(inputArray, -3, true));
 	}
 	
 	/**
