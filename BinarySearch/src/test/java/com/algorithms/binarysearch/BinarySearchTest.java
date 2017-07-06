@@ -24,13 +24,13 @@ public class BinarySearchTest {
     public void testRecursiveSearch() {
 		BinarySearch binarySearch = new BinarySearch();
 		int[] inputArray = initArray();
-		
+
 		assertTrue("Expected value to be found", binarySearch.search(inputArray, 10, true));
 		assertFalse("Expected value to not be found", binarySearch.search(inputArray, 100, true));
 		assertTrue("Expected value to be found", binarySearch.search(inputArray, 99, true));
 		assertFalse("Expected value to not be found", binarySearch.search(inputArray, -20, true));
 	}
-	
+
 	/**
 	 * Test the iterative binary search..
 	 */
@@ -38,22 +38,23 @@ public class BinarySearchTest {
     public void testIterativeSearch() {
 		BinarySearch binarySearch = new BinarySearch();
 		int[] inputArray = initArray();
-		
+
 		assertTrue("Expected value to be found", binarySearch.search(inputArray, 45, false));
 		assertFalse("Expected value to not be found", binarySearch.search(inputArray, 101, false));
 		assertTrue("Expected value to be found", binarySearch.search(inputArray, 58, false));
 		assertFalse("Expected value to not be found", binarySearch.search(inputArray, -3, false));
 	}
-	
+
 	/**
 	 * Test that search will return false.
 	 */
+	@Test
 	public void testInvalidInput() {
 		BinarySearch binarySearch = new BinarySearch();
 		int[] inputArray = initRandArray();
 		assertFalse("Expected value to not be searched", binarySearch.search(inputArray, 50, true));
 	}
-	
+
 	/**
 	 * @return an initialised sorted array.
 	 */
@@ -64,7 +65,7 @@ public class BinarySearchTest {
 		}
 		return inputArray;
 	}
-	
+
 	/**
 	 * @return an initialised array of random integers.
 	 */

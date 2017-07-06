@@ -1,5 +1,7 @@
 package com.algorithms.binarysearch;
 
+import org.apache.log4j.Logger;
+
 /**
  * The BinarySearch.
  * <p>
@@ -13,6 +15,11 @@ package com.algorithms.binarysearch;
  * @author szeyick
  */
 public class BinarySearch {
+
+    /**
+     * The name of the logger.
+     */
+    private static final Logger logger = Logger.getLogger(BinarySearch.class.getSimpleName());
 
 	/**
 	 * Accessor method to allow a binary search to be performed.
@@ -34,7 +41,7 @@ public class BinarySearch {
 		}
 		return itemFound;
 	}
-	
+
 	/**
 	 * Recursively search for the item in the array.
 	 * @param input - The input array.
@@ -64,7 +71,7 @@ public class BinarySearch {
 			return recursiveSearch(input, targetValue, middleIndex + 1, end);
 		}
 	}
-	
+
 	/**
 	 * Iteratively search for the item in the array.
 	 * @param input - The input array.
@@ -75,7 +82,7 @@ public class BinarySearch {
 		int start = 0;
 		int end = input.length - 1;
 		int middleIndex = findMiddleIndex(start, end);
-		
+
 		// In an iterative search, we start in the middle and keep track of the higher and
 		// lower indices. When we move to the left or right sub-array, we need to update these
 		// indices accordingly.
@@ -84,7 +91,7 @@ public class BinarySearch {
 				return true; // We have the middle value.
 			}
 			if (targetValue < input[middleIndex]) {
-				// If the target is smaller then the middle value, then we need to look in 
+				// If the target is smaller then the middle value, then we need to look in
 				// the left part of the array.
 				end = middleIndex;
 			}
@@ -107,7 +114,7 @@ public class BinarySearch {
 	private int findMiddleIndex(int start, int end) {
 		return (start + end) / 2;
 	}
-	
+
 	/**
 	 * @param input - The input array.
 	 * @return <code>true</code> if the input is ordered, <code>false</code> otherwise.
@@ -126,7 +133,7 @@ public class BinarySearch {
 			}
 		}
 		if (!isValid) {
-			System.out.println("Input array is invalid");
+		    logger.error("Input array is not in sorted order.");
 		}
 		return isValid;
 	}
