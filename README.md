@@ -5,4 +5,6 @@
 A collection of algorithms
 
 * Binary Search
+* Counting Sort
+* Hashing
 

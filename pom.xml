@@ -12,6 +12,8 @@
     </properties>
     
     <modules>
-        <module>BinarySearch</module>       
+        <module>BinarySearch</module> 
+        <module>CountingSort</module> 
+        <module>Hashing</module>       
     </modules>
 </project>
